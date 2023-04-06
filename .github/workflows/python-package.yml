@@ -1,0 +1,29 @@
+name: TaskMaster CI/CD
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code from repository
+      uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.8"
+    - name: Install dependancies
+      run: |
+        pip install --upgrade pip setuptools wheel
+        pip install .[test]
+    - name: Run Tests
+      run: |
+        pytest
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
