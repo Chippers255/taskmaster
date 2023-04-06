@@ -10,3 +10,10 @@ source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install .
 ```
+
+### Run
+```bash
+export PINECONE_API_KEY=<YOUR PINECONE API KEY GOES HERE>
+export OPENAI_API_KEY=<YOUR OPENAI API KEY GOES HERE>
+python main.py
+```
