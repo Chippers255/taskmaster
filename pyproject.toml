@@ -61,8 +61,7 @@ python_files = "tests.py test_*.py"
 addopts = """\
     -ra \
     --flake8 \
-    --cov=. \
-    --cov=senso \
+    --cov=taskmaster \
     --cov-fail-under=10 \
     --cov-report xml --cov-report term-missing:skip-covered \
     -n auto \
