@@ -1,5 +1,5 @@
 # TaskMaster
-An AI powered task management system inspired by [babyagi](https://github.com/yoheinakajima/babyagi).
+An GPT powered task management system inspired by [babyagi](https://github.com/yoheinakajima/babyagi).
 
 ## How to Use
 
